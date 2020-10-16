@@ -1,9 +1,12 @@
 """Setup script for pylibsensors3 package."""
 
+from os import path
 import setuptools
 
-with open("README.md", "r") as fh:
-    LONG_DESC = fh.read()
+# read the contents of your README file
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    LONG_DESC = f.read()
 
 setuptools.setup(
         name="pylibsensors3",
